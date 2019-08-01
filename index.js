@@ -25,7 +25,6 @@ bot.onText(/^\/cognome(@[^ ]+)?$/, msg => {
 });
 bot.onText(/^\/cognome(@[^ ]+)? (.+)/, (msg, matches) => {
     const cognome = matches.splice(1).join("").toUpperCase();
-    console.log(cognome, gruppi);
     const pair = gruppi.find(it => cognome >= it.from && cognome <= it.to);
     let response;
     if (pair == undefined)

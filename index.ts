@@ -24,6 +24,7 @@ bot.onText(/^\/cognome(@[^ ]+)?$/, msg => {
 		parse_mode: "Markdown",
 		reply_to_message_id: msg.message_id
 	}).then(sentMessage => {
+		// Auto-deletes the message after 2 min to avoid cluttering the chat
 		setTimeout(() => {
 			bot.deleteMessage(sentMessage.chat.id, sentMessage.message_id + "");
 			bot.deleteMessage(msg.chat.id, msg.message_id + "");
@@ -33,7 +34,6 @@ bot.onText(/^\/cognome(@[^ ]+)?$/, msg => {
 
 bot.onText(/^\/cognome(@[^ ]+)? (.+)/, (msg, matches) => {
 	const cognome = matches.splice(1).join("").toUpperCase();
-	console.log(cognome, gruppi);
 	const pair = gruppi.find(it => cognome >= it.from && cognome <= it.to);
 	let response: string;
 	if (pair == undefined)
