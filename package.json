@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@types/js-yaml": "^3.12.1",
+    "@types/node-telegram-bot-api": "^0.31.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}

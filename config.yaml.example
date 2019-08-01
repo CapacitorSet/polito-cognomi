@@ -1,0 +1,6 @@
+token: 123:abcd
+gruppi:
+  AAA-BARK:
+    - https://t.me/joinchat/abc
+  BARL-BORZ:
+    - https://t.me/joinchat/def
